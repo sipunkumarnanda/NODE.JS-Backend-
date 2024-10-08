@@ -1,4 +1,3 @@
-Here is the content converted to Markdown style:
 
 ```bash
 echo "Hello from command.sh"
