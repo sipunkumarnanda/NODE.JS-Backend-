@@ -1,4 +1,4 @@
-```markdown
+
 ### Node.js Process Object - In-Depth Explanation
 
 In Node.js, the `process` object is a powerful global object that provides extensive information about, and control over, the running process. It is essential for various tasks, such as managing the process lifecycle, accessing system details, and interacting with the environment. Here's a deep dive into the properties and methods provided by the `process` object, useful for advanced understanding and teaching.
@@ -222,7 +222,3 @@ In Node.js, the `process` object is a powerful global object that provides exten
 ### Conclusion
 
 The `process` object in Node.js is an indispensable tool for managing the application’s lifecycle, interacting with the environment, handling input/output, and ensuring efficient execution. Understanding and leveraging its properties and methods allows developers to write more efficient, responsive, and portable Node.js applications.
-
-### Suggested File Name:
-- `nodejs_process_object_in_depth.md`
-```
