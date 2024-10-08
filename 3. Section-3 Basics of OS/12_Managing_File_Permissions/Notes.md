@@ -1,33 +1,49 @@
-Read  => r  => 4  (represent in number)
-Write  => w  => 2
-Execute  => x  => 1
+Here is the content converted to Markdown style:
 
----------------------------------------
-
+```bash
 echo "Hello from command.sh"
+```
 
-
-
+### Multi-line Comment:
+```bash
 : << 'END_COMMENT'
+```
 
-NOTE : - 
-./filename : To run the file in bash 
-ls -l => for see all file permissions 
+---
 
-------------------------------------------------
+### **NOTE:**
 
-# Removing permission of a file 
-chmod u-rwx, g-rwx , o-rwx filename 
-Here u - User , g - Group , o - Others 
+- `./filename` : To run the file in bash.
+- `ls -l` : To see all file permissions.
 
-# Adding Permissions to a File 
-chmod u+rwx, g+rwx , o+rwx filename 
-Here u - User , g - Group , o - Others 
+---
 
-------------------------------------------
+### **Removing Permissions of a File:**
+```bash
+chmod u-rwx, g-rwx , o-rwx filename
+```
+- **u** : User
+- **g** : Group
+- **o** : Others
 
-Read  => r  => 4  (represent in number)
-Write  => w  => 2
-Execute  => x  => 1
+### **Adding Permissions to a File:**
+```bash
+chmod u+rwx, g+rwx , o+rwx filename
+```
+- **u** : User
+- **g** : Group
+- **o** : Others
 
+---
+
+### **File Permissions and Their Numeric Representation:**
+
+- **Read** (r) = 4
+- **Write** (w) = 2
+- **Execute** (x) = 1
+
+---
+
+```bash
 END_COMMENT
+```
