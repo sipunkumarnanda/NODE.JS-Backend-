@@ -4,10 +4,10 @@ In JavaScript, the behavior of variables declared with `var` is different in the
 ### 1. **Global Scope in the Browser:**
 In the browser, when you declare a variable using `var` at the top level (outside of any function), it becomes a property of the global `window` object. The `window` object represents the global execution context in browsers.
 
-For example:
-`var num = 65;`
-`console.log(num);       // Outputs: 65`
-`console.log(window.num); // Outputs: 65 (since num is a property of window)`
+For example:  
+`var num = 65;`  
+`console.log(num);       // Outputs: 65`  
+`console.log(global.num); // Outputs: undefined (since num is not global in Node.js)`
 
 - **Why Global in Browser?**
 In the browser, the global scope is essentially the `window` object, and all global variables declared with `var` are attached to it. So, `var num` becomes `window.num`. This makes it available globally within the browser environment.
