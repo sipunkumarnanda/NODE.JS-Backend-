@@ -1,7 +1,7 @@
 
 ---
 
-### Detailed Notes on `...args` in JavaScript (Rest Parameter)
+# Detailed Notes on `...args` in JavaScript (Rest Parameter)
 
 ---
 
