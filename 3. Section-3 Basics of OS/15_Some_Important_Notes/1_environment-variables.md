@@ -1,6 +1,8 @@
 ### **Environment Variables: In-Depth Explanation and Notes**
 
-Environment variables are key-value pairs stored in the operating system that influence how applications and processes behave. They play a crucial role in configuring software and managing system-wide settings. In this lesson, we will explore environment variables in detail, their types, use cases, and how they relate to Node.js and WSL.
+An **environment variable** is a dynamic value that can affect the behavior of processes or programs on a computer. It is a key-value pair used by the operating system or software applications to store configuration settings, system information, or paths to resources that the program or system can access during execution.
+
+Environment variables help programs know important details, such as where to find necessary files, what user is logged in, or what language should be used, without needing to hard-code these details into the program itself.
 
 ---
 
