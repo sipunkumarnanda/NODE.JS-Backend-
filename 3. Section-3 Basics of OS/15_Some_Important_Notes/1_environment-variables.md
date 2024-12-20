@@ -6,6 +6,15 @@ Environment variables help programs know important details, such as where to fin
 
 ---
 
+An **environment variable** is a key-value pair that stores information about the system or user settings that programs and processes can use. It helps configure how programs run by providing details like paths to important files, user preferences, and system settings.
+
+### Uses of Environment Variables:
+1. **Configuration**: They store system settings like file paths, language settings, or user information.
+2. **Program Behavior**: Programs can read these variables to know how to behave (e.g., where to find files, which version to use).
+3. **Security**: Sensitive information like API keys or passwords can be stored in environment variables instead of hardcoding them in the application code.
+
+---
+
 ### **1. What are Environment Variables?**
 
 - **Definition**: Environment variables are dynamic values that affect the way processes or applications run in an operating system.
