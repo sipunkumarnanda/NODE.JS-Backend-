@@ -1,0 +1,78 @@
+
+# Setting System Environment Variables Using Node.js
+
+## 1. Set Environment Variables Temporarily in Node.js
+
+To set environment variables for the current Node.js process (temporary and only for the duration of the program), you can use `process.env`:
+
+```javascript
+process.env.MY_VAR = 'my_value';
+console.log(process.env.MY_VAR);  // Output: my_value
+```
+
+This change will only persist for the duration of the Node.js program execution.
+
+## 2. Modify System Environment Variables Permanently
+
+To **permanently** set system environment variables, you need to modify system files or registry entries directly.
+
+### A. For Windows: Modify Environment Variables Using the Registry
+
+In **Windows**, environment variables are stored in the registry. You can use Node.js to execute `reg` commands to modify the registry directly.
+
+```javascript
+const { exec } = require('child_process');
+
+// Set a system-wide environment variable (requires admin rights)
+exec('reg add "HKCU\Environment" /v MY_VAR /t REG_SZ /d "my_value" /f', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.error(`stderr: ${stderr}`);
+});
+```
+
+- **Explanation**:
+  - `reg add` adds a new key or modifies an existing one in the registry.
+  - `"HKCU\Environment"` specifies user environment variables.
+  - `/v MY_VAR` defines the variable name.
+  - `/d "my_value"` sets the value.
+  - `/f` forces overwriting the variable without confirmation.
+
+### B. For Unix-based Systems: Modify `.bashrc` or `.bash_profile`
+
+For **Unix-based systems**, environment variables are typically set in the `.bashrc` or `.bash_profile` files. You can append new environment variables to these files using Node.js.
+
+```javascript
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+
+const homeDir = os.homedir();
+const bashrcPath = path.join(homeDir, '.bashrc');  // or use '.bash_profile' depending on the shell
+
+const newEnvVar = 'export MY_VAR="my_value"
+';
+
+// Append the new environment variable to the file
+fs.appendFile(bashrcPath, newEnvVar, (err) => {
+  if (err) {
+    console.error('Failed to update .bashrc:', err);
+  } else {
+    console.log('.bashrc updated successfully.');
+  }
+});
+```
+
+- **Explanation**:
+  - `os.homedir()` gets the home directory of the current user.
+  - `fs.appendFile()` appends the environment variable string to the `.bashrc` file.
+
+After modifying `.bashrc`, run `source ~/.bashrc` to apply the changes in the current session.
+
+## Important Notes:
+- **Admin Rights**: On Windows, modifying environment variables system-wide may require administrator privileges.
+- **System-Wide Changes**: For global changes, modify system-wide files (e.g., `/etc/environment` on Linux or `HKLM` registry on Windows).
+- **Shell Restart**: For changes to `.bashrc` or `.bash_profile`, restart the terminal or use `source ~/.bashrc` to apply changes.
