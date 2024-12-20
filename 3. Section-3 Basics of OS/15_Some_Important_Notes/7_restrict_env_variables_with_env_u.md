@@ -1,5 +1,5 @@
 
-```markdown
+
 # Using `env -u` to Unset Environment Variables Temporarily
 
 The `env -u` command is used to **unset** an environment variable temporarily for the execution of a command. This allows you to remove an environment variable from the current environment for the specific command without permanently affecting it in the system or other processes.
