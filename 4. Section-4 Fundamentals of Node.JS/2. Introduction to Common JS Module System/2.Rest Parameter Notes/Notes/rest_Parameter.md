@@ -32,7 +32,7 @@ console.log(sum(1, 2));  // Outputs: 3
 
 ### 2. **How does the rest parameter work?**
 
-- **Rest parameter** syntax (`...`) allows a function to accept a variable number of arguments and groups them into an array.
+- **Rest parameter** syntax (`...`) allows a function to accept a variable number of arguments and groups them into an `array.`
   
   **Example:**
   ```javascript
