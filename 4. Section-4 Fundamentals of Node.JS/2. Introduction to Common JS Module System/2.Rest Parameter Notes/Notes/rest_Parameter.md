@@ -70,7 +70,7 @@ console.log(sum(1, 2));  // Outputs: 3
 
 ### 4. **Key Points about Rest Parameters:**
 
-- **Must come last**: In a function definition, the rest parameter must be the last parameter. You cannot have parameters after the rest parameter.
+- **Must come last**: In a function definition, the rest parameter must be the `last parameter. You cannot have parameters after the rest parameter.`
   ```javascript
   function example(a, ...args) {
     // Correct
