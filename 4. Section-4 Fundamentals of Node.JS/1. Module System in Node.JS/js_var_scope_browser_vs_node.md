@@ -1,5 +1,4 @@
-```markdown
-In JavaScript, the behavior of variables declared with `var` is different in the browser environment compared to the Node.js environment due to differences in how each environment handles global scope.
+### In JavaScript, the behavior of variables declared with `var` is different in the browser environment compared to the Node.js environment due to differences in how each environment handles global scope.
 
 ### 1. **Global Scope in the Browser:**
 In the browser, when you declare a variable using `var` at the top level (outside of any function), it becomes a property of the global `window` object. The `window` object represents the global execution context in browsers.
