@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "13.-publishing-package-on-npm",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "sipun": "^1.0.1"
+  }
+}
