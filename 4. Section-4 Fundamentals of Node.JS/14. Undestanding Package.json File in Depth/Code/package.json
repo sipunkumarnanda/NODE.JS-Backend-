@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "ls",
+    "restart": "node",
+    "stop": "git -v",
+    "hi": "ls",
+    "dev": "node --watch app.js",
+    "hello": "pwd"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
