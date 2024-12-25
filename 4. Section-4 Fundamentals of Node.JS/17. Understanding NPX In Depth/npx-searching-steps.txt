@@ -1,0 +1,26 @@
+What NPX does ? 
+- Searches for a file and executes it .
+
+Search Step-1
+Searches for package.json in current working directory 
+Searches for name key in the json file 
+searches for bin key 
+
+"bin": { "hello": "app.js" } defines a CLI command hello that points to app.js.
+When you run npx hello, Node.js uses the "bin" field in package.json to locate and execute app.js.
+
+Search Steps-2 
+Searches for node_modules\.bin\hello in current working directory And Executes this file 
+
+Search Steps-3
+Searches for hello file in global npm folder - /c/Users/Sipun Kumar Nanda/AppData/Roaming/npm/hello
+Executes this file 
+
+Search Steps-4
+Searches for hello package in npx cache
+
+Search Steps-5
+Searches for hello package in npmjs registry , 
+Prompts to install the package if found 
+Downloads and install
+
