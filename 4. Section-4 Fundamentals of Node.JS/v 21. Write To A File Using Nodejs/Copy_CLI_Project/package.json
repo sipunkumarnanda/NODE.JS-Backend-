@@ -1,0 +1,8 @@
+{
+  "type" : "module",
+  "name": "my-cli-tool",
+  "version": "1.0.0",
+  "bin": {
+    "copy": "C:\\Users\\Sipun Kumar Nanda\\OneDrive\\Desktop\\5. ProCoderr\\4. Section-4 Fundamentals of Node.JS\\21. Write To A File Using Nodejs\\task_copy\\node_modules\\.bin\\copy"
+  }
+}
