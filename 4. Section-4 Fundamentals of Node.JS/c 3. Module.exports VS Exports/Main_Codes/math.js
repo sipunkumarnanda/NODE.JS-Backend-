@@ -34,8 +34,11 @@ exports = {
 }   // while importing giving { } Empty object . Why ?? ANswer => Because its an different Object 
 
 console.log(module.exports);   // { }
-
-// Ans = > The issue occurs because exports is being reassigned in your code. When you do exports = { sum, product }, you're creating a new object and assigning it to exports, but Node.js still references the original module.exports. As a result, your new object is not exported. 
+/*
+Ans = > The issue occurs because exports is being reassigned in your code. When you do exports = { sum, product },
+ you're creating a new object and assigning it to exports, but Node.js still references the original module.
+ exports. As a result, your new object is not exported. 
+*/
 
 
 // Difference 
@@ -49,3 +52,22 @@ exports.sum = sum
 exports.product = product
 
 console.log(module);
+
+
+// Explanation
+/*
+const obj = {
+    name : "Ankita"
+}
+
+let newObj = obj
+
+console.log(newObj);
+console.log(newObj === obj);  // True   // Here newObj Refer to the same memory location which is  obj's memory location
+
+newObj = {
+    age : 20
+}
+console.log(newObj);
+console.log(newObj === obj );   // False  // Because here we assign a new Object to the variable 
+*/
