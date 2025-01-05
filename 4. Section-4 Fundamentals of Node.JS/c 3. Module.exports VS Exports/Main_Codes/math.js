@@ -38,6 +38,16 @@ console.log(module.exports);   // { }
 Ans = > The issue occurs because exports is being reassigned in your code. When you do exports = { sum, product },
  you're creating a new object and assigning it to exports, but Node.js still references the original module.
  exports. As a result, your new object is not exported. 
+
+ So This is Not Valid For Exporting , This is Not Valid Syntax 
+ exports = {
+    sum ,
+    product
+} 
+
+In JS we can do like this 
+exports.sum = sum 
+exports.product = product    // This is Correct Syntax 
 */
 
 
