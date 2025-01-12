@@ -1,3 +1,5 @@
+// In JS Everything is an Object 
+
 const p1 = {
     fname : "Sipun" ,
     lname : "Kumar" ,
