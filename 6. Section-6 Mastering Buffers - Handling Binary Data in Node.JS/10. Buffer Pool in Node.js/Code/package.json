@@ -1,0 +1,16 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" ,
+   "debug": "node --inspect-brk app.js" ,
+   "debug2" : "node --inspect-brk app2.js" ,
+   "debug3" : "node --inspect-brk app3.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": ""
+}
