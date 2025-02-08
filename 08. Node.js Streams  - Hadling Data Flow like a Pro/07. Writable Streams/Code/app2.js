@@ -1,14 +1,14 @@
 import fs from 'fs';
 
-const writeStream = fs.createWriteStream("file.txt");
+const writeStream = fs.createWriteStream("file.txt", {highWaterMark : 4});
 
 // console.log(writeStream.writableHighWaterMark);  
 // Default writable buffer size is 16 KB
 
 // Writing data to the writable stream
-writeStream.write('abc');
-writeStream.write('ABC');
-writeStream.write('123');
+// writeStream.write('abc');
+// writeStream.write('ABC');
+// writeStream.write('123');
 
 // The following setTimeout calls attempt to write data with a delay
 // setTimeout(() => {
@@ -40,8 +40,6 @@ writeStream.write('123');
 
 
 // ----------------------------------------------------------------------------------------------------
-
-import fs from 'fs';
 
 const readStream = fs.createReadStream('chars.txt', { highWaterMark: 4 }); // Setting the buffer size to 4 bytes
 
