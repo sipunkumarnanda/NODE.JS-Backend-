@@ -1,52 +1,29 @@
-import fs from 'fs'
+import fs from "fs";
 
-// const writeStream = fs.createWriteStream("file.mp4")
-// const writeStream = fs.createWriteStream("file.txt", {highWaterMark: 4})
+const writeStream = fs.createWriteStream("file.txt", { highWaterMark: 4 });
 
-// console.log(writeStream.writableHighWaterMark);  // Bydefault Size : 16 KB 
+// console.log(writeStream.writableHighWaterMark); // 4
 
+// console.log(writeStream.writableLength);  // 0
 
-// writeStream.write('abc')
-// writeStream.write('ABC')
-// writeStream.write('123')
+let i = 1;
 
-//------------------------------------------------------------------------------
-const writeStream = fs.createWriteStream("file.mp4", {highWaterMark : 1 * 1024 * 1024})
-// ------------------------------------------------------------------------------
+writeStream.on("drain", () => {
+  console.log("Drain: ", writeStream.writableLength);
+  write100A();
+});
 
-console.time()
+write100A();
 
-const readStream = fs.createReadStream("C:\\Users\\Sipun Kumar Nanda\\OneDrive\\Desktop\\3. Igniting our App (HD Video).mp4", {highWaterMark: 1* 1024 * 1024})
-
-readStream.on("data", (chunkBuffer) => {
-  // fs.appendFileSync('data.mp4', chunkBuffer)
-  // File size : 1.5 GB
-  // Memory : 42 MB
-  // cpu : 20%
-  // default Time : 5.224s
-
-
-   // File size : 1.5 GB
-  // Memory : 1 GB
-  // cpu : 16%
-  // default Time : 1.867s
-  const isEmpty = writeStream.write(chunkBuffer)
-  if(!isEmpty){
-    readStream.pause()
+function write100A() {
+  while (i <= 1000) {
+    console.log(writeStream.writableLength);
+    const isEmpty = writeStream.write("a");
+    i++;
+    
+    if (!isEmpty) {
+      break;
+    }
+    console.log("IS EMPTY : ", isEmpty);
   }
-
-  // After handling backPressure 
-  // File size : 1.5 GB
-  // Memory : 40 MB
-  // cpu : 24%
-  // default Time : 3.379s
-});
-
-writeStream.on("drain", (()=>{
-    readStream.resume()
-  }))
-
-readStream.on("end", () => {
-    console.timeEnd(); 
-});
-
+}
