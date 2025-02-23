@@ -1,0 +1,1 @@
+Hii iam giving input from app.js to childApp.js 😂😂
