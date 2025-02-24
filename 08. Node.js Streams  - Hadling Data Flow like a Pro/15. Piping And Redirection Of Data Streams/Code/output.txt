@@ -1,0 +1,2 @@
+STDOUT : Hii From Script.js NEW
+STDERR : Hii From Script.js Ne
