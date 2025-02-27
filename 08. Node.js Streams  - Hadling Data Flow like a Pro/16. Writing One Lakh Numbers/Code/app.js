@@ -40,3 +40,7 @@ fs.appendFile('number.txt', `${i}, `, ((err)=>{
 }))
 }
 }
+
+// The numbers are not written in sequential order to the file.
+
+// solution - we can solve this problem using sync method - see file sync.js
