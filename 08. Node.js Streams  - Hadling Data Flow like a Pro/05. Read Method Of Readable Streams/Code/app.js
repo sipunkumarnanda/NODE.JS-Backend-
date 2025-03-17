@@ -13,7 +13,22 @@ readStream.on("readable", () => {
     // the remaining data in the buffer would be 3 bytes.
     console.log(readStream.read(1));  // Logs: the first byte of data (could be a Buffer)
 
-    // Logs the remaining length of data in the internal buffer after calling read(1).
-    // After reading 1 byte, it should be 0 because only 1 byte was read.
-    console.log(readStream.readableLength);  // Logs: 0
+    //  Logs the remaining length of data in the internal buffer after calling read(1).
+    // Since 1 byte was read from the 4-byte buffer, the new buffer size should be 3, not 0.
+    console.log(readStream.readableLength);  // Logs:  3
 });
+
+
+
+
+
+/*
+Output
+
+4
+<Buffer 41>
+3
+7
+<Buffer 42>
+6
+*/
